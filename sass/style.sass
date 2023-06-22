@@ -1,0 +1,179 @@
+@import 'variables'
+
+/* HEADER */
+
+*
+    padding: 0
+    margin: 0
+    text-decoration: none
+    list-style: none
+    box-sizing: border-box
+    font-family: 'Poppins'
+    color: $font-color
+
+body
+    background-color: $color-bg-body
+/* CARROSSEL */
+
+body::-webkit-scrollbar
+    width: 12px
+
+body::-webkit-scrollbar-track
+    background: #fff
+
+body::-webkit-scrollbar-thumb
+    background-color: #0f0f0f
+    border-radius: 20px
+    border: 3px solid #a3a3a3
+
+.swiper
+    margin-top: 50px
+    width: 1000px
+    background-color: $color-bg-body
+
+    .swiper-slide
+        text-align: center
+        font-size: 18px
+        background: #000
+        display: flex
+        justify-content: center
+        align-items: center
+        img
+            width: 100%
+            height: 500px
+            background-position: center center
+            cursor: pointer
+            transition: 0.4s
+            border-radius: 1.25rem
+            &:hover
+                opacity: 0.8
+
+/* NAVEGAÇÃO
+
+header
+    display: flex
+    align-content: center
+    justify-content: center
+    background-color: $color-bg-header
+    width: 100%
+    height: 6.25rem
+
+    .logo
+        cursor: pointer
+        color: $font-color
+        transition: 0.4s
+        &:hover
+            color: #888888
+    nav
+        display: flex
+        align-items: center
+        justify-content: space-around
+        width: 100%
+        ul
+            display: flex
+            align-content: center
+            gap: 1.25rem
+        li>a
+            color: $font-color
+            transition: 0.4s
+            &:hover
+                color: #888888
+
+.search
+    width: 225px
+    display: flex
+    align-items: center
+    position: relative
+    justify-content: center
+
+    .active-search
+        width: 1.875rem
+        border: none
+        cursor: pointer
+        background-color: transparent
+        border-radius: .3125rem
+        border-bottom: 5px solid #333232
+        padding: 5px
+        transition: 0.4s
+        position: absolute
+        right: 0
+
+        &:hover
+            background-color: #333232
+    .search-input
+        display: none
+        border: none
+        border-bottom: 2px solid #333232
+        outline: none
+        color: $font-color
+        height: 1.875rem
+        border-bottom-left-radius: 5px
+        padding: .3125rem
+        background-color: transparent
+        animation: myAnim 1s ease 0s 1 normal forwards
+
+.search-input.active
+    display: block
+    animation: myAnim 1s ease 0s 1 normal forwards
+
+@keyframes myAnim
+    0%
+        opacity: 0
+        transform: translateX(50px)
+
+    100%
+        opacity: 1
+        transform: translateX(0)
+
+/* PRODUTOS */
+
+section
+    @extend  %base-section-style
+
+.container-products
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+    .product
+        width: 260px
+        height: 100%
+        padding: 10px
+        border-radius: 20px
+        background-color: $color-bg-header
+        display: flex
+        flex-direction: column
+        align-content: center
+        text-align: center
+        .image-product
+            img
+                width: 100%
+                border-top-right-radius: 20px
+                border-top-left-radius: 20px
+                transition: 0.4s
+                cursor: pointer
+                &:hover
+                    opacity: 0.7
+        .name-product
+            text-align: left
+            h2
+                cursor: pointer
+                transition: 0.4s
+                &:hover
+                    color: #333232
+
+        .price-product
+            span
+                color: $color-span
+                text-decoration: line-through
+            h1
+                color: $color-price
+        .buy-cart
+            margin-top: 20px
+            display: flex
+            align-items: center
+            justify-content: space-between
+            .buy,.cart
+                @extend %style-buttons-container-products
+                &:hover
+                    background-color: #0f0f0f

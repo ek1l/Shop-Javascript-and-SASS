@@ -1,0 +1,219 @@
+@charset "UTF-8";
+section {
+  width: 100%;
+  height: 100%;
+  margin-top: 6.25rem;
+}
+
+.container-products .product .buy-cart .buy, .container-products .product .buy-cart .cart {
+  color: #ffffff;
+  background-color: #333232;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  height: 20px;
+  text-align: center;
+  height: 1.875rem;
+  width: 6.25rem;
+  border-radius: 0.625rem;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+/* HEADER */
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Poppins";
+  color: #ffffff;
+}
+
+body {
+  background-color: #0f0f0f;
+}
+
+/* CARROSSEL */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #0f0f0f;
+  border-radius: 20px;
+  border: 3px solid #a3a3a3;
+}
+
+.swiper {
+  margin-top: 50px;
+  width: 1000px;
+  background-color: #0f0f0f;
+}
+.swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper .swiper-slide img {
+  width: 100%;
+  height: 500px;
+  background-position: center center;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 1.25rem;
+}
+.swiper .swiper-slide img:hover {
+  opacity: 0.8;
+}
+
+/* NAVEGAÇÃO */
+header {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: #000;
+  width: 100%;
+  height: 6.25rem;
+}
+header .logo {
+  cursor: pointer;
+  color: #ffffff;
+  transition: 0.4s;
+}
+header .logo:hover {
+  color: #888888;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+header nav ul {
+  display: flex;
+  align-content: center;
+  gap: 1.25rem;
+}
+header nav li > a {
+  color: #ffffff;
+  transition: 0.4s;
+}
+header nav li > a:hover {
+  color: #888888;
+}
+
+.search {
+  width: 225px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+.search .active-search {
+  width: 1.875rem;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 0.3125rem;
+  border-bottom: 5px solid #333232;
+  padding: 5px;
+  transition: 0.4s;
+  position: absolute;
+  right: 0;
+}
+.search .active-search:hover {
+  background-color: #333232;
+}
+.search .search-input {
+  display: none;
+  border: none;
+  border-bottom: 2px solid #333232;
+  outline: none;
+  color: #ffffff;
+  height: 1.875rem;
+  border-bottom-left-radius: 5px;
+  padding: 0.3125rem;
+  background-color: transparent;
+  animation: myAnim 1s ease 0s 1 normal forwards;
+}
+
+.search-input.active {
+  display: block;
+  animation: myAnim 1s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* PRODUTOS */
+.container-products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.container-products .product {
+  width: 260px;
+  height: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+.container-products .product .image-product img {
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.container-products .product .image-product img:hover {
+  opacity: 0.7;
+}
+.container-products .product .name-product {
+  text-align: left;
+}
+.container-products .product .name-product h2 {
+  cursor: pointer;
+  transition: 0.4s;
+}
+.container-products .product .name-product h2:hover {
+  color: #333232;
+}
+.container-products .product .price-product span {
+  color: red;
+  text-decoration: line-through;
+}
+.container-products .product .price-product h1 {
+  color: green;
+}
+.container-products .product .buy-cart {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container-products .product .buy-cart .buy:hover, .container-products .product .buy-cart .cart:hover {
+  background-color: #0f0f0f;
+}
+
+/*# sourceMappingURL=style.css.map */
