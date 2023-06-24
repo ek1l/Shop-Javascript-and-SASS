@@ -12,7 +12,7 @@ activeSearchButton.addEventListener("click", activeSearch);
 let products = [
   {
     imgProduct: "pc1.jpeg",
-    nameProduct: "PC GAMER",
+    nameProduct: "1 PC GAMER",
     descriptionProduct:
       "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
     offerProduct: "de 4,998,80",
@@ -21,7 +21,7 @@ let products = [
 
   {
     imgProduct: "pc1.jpeg",
-    nameProduct: "PC GAMER",
+    nameProduct: "2 PC GAMER",
     descriptionProduct:
       "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
     offerProduct: "de 4,998,80",
@@ -30,7 +30,7 @@ let products = [
 
   {
     imgProduct: "pc1.jpeg",
-    nameProduct: "PC GAMER",
+    nameProduct: "3 PC GAMER",
     descriptionProduct:
       "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
     offerProduct: "de 4,998,80",
@@ -182,6 +182,7 @@ function renderProductsList() {
     let createButtonCartProduct = document.createElement("button");
     createButtonCartProduct.classList.add("cart");
     createButtonCartProduct.textContent = "Add to cart";
+    createButtonCartProduct.dataset.index = products.indexOf(e);
 
     createProduct.appendChild(createDivImageProduct);
     createDivImageProduct.appendChild(createImageProduct);
@@ -215,29 +216,38 @@ function somarCartProduct() {
   transformNumberCountCart += 1;
   countCart.textContent = transformNumberCountCart;
   verifyProducExist();
-
 }
 
 function verifyProducExist() {
   if (transformNumberCountCart > 0) {
     countCart.style.display = "block";
-    notification()
+    notification();
   } else {
     countCart.style.display = "none";
   }
 }
 
 function notification() {
-  const notification = document.querySelector('.notification');
+  const notification = document.querySelector(".notification");
   notification.style.display = "block";
   setTimeout(() => {
     notification.style.display = "none";
-  },1000)
-
+  }, 2000);
 }
-
 verifyProducExist();
 
+let intemsCart = [];
+
+function addItemsToCart(index) {
+  const product = products[index];
+  intemsCart.push(product);
+  console.log(intemsCart);
+}
+
 buttonCart.forEach((e) => {
-  e.addEventListener("click", somarCartProduct);
+  e.addEventListener("click", () => {
+    const index = parseInt(e.dataset.index);
+    somarCartProduct();
+    addItemsToCart(index);
+  });
 });
