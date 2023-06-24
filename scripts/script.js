@@ -7,13 +7,63 @@ const activeSearch = () => buttonActivated.classList.toggle("active");
 
 activeSearchButton.addEventListener("click", activeSearch);
 
-
-
-// RENDERIZAR PRODUTOS NA TELA 
-
+// RENDERIZAR PRODUTOS
 
 let products = [
-    
+  {
+    imgProduct: "pc1.jpeg",
+    nameProduct: "PC GAMER",
+    descriptionProduct:
+      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
+    offerProduct: "de 4,998,80",
+    priceProduct: "R$3,579,90",
+  },
+
+  {
+    imgProduct: "pc1.jpeg",
+    nameProduct: "PC GAMER",
+    descriptionProduct:
+      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
+    offerProduct: "de 4,998,80",
+    priceProduct: "R$3,579,90",
+  },
+
+  {
+    imgProduct: "pc1.jpeg",
+    nameProduct: "PC GAMER",
+    descriptionProduct:
+      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
+    offerProduct: "de 4,998,80",
+    priceProduct: "R$3,579,90",
+  },
+
+  {
+    imgProduct: "pc1.jpeg",
+    nameProduct: "PC GAMER",
+    descriptionProduct:
+      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
+    offerProduct: "de 4,998,80",
+    priceProduct: "R$3,579,90",
+  },
+
+  {
+    imgProduct: "pc1.jpeg",
+    nameProduct: "PC GAMER",
+    descriptionProduct:
+      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
+    offerProduct: "de 4,998,80",
+    priceProduct: "R$3,579,90",
+  },
+
+  {
+    imgProduct: "pc1.jpeg",
+    nameProduct: "PC GAMER",
+    descriptionProduct:
+      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
+    offerProduct: "de 4,998,80",
+    priceProduct: "R$3,579,90",
+  },
+
   {
     imgProduct: "pc1.jpeg",
     nameProduct: "PC GAMER",
@@ -24,6 +74,72 @@ let products = [
   },
 
 
+  {
+    imgProduct: "pc1.jpeg",
+    nameProduct: "PC GAMER",
+    descriptionProduct:
+      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
+    offerProduct: "de 4,998,80",
+    priceProduct: "R$3,579,90",
+  },
+
+
+  {
+    imgProduct: "pc1.jpeg",
+    nameProduct: "PC GAMER",
+    descriptionProduct:
+      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
+    offerProduct: "de 4,998,80",
+    priceProduct: "R$3,579,90",
+  },
+
+
+  {
+    imgProduct: "pc1.jpeg",
+    nameProduct: "PC GAMER",
+    descriptionProduct:
+      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
+    offerProduct: "de 4,998,80",
+    priceProduct: "R$3,579,90",
+  },
+
+
+  {
+    imgProduct: "pc1.jpeg",
+    nameProduct: "PC GAMER",
+    descriptionProduct:
+      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
+    offerProduct: "de 4,998,80",
+    priceProduct: "R$3,579,90",
+  },
+
+
+  {
+    imgProduct: "pc1.jpeg",
+    nameProduct: "PC GAMER",
+    descriptionProduct:
+      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
+    offerProduct: "de 4,998,80",
+    priceProduct: "R$3,579,90",
+  },
+
+  {
+    imgProduct: "pc1.jpeg",
+    nameProduct: "PC GAMER",
+    descriptionProduct:
+      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
+    offerProduct: "de 4,998,80",
+    priceProduct: "R$3,579,90",
+  },
+
+  {
+    imgProduct: "pc1.jpeg",
+    nameProduct: "PC GAMER",
+    descriptionProduct:
+      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
+    offerProduct: "de 4,998,80",
+    priceProduct: "R$3,579,90",
+  },
 ];
 
 function renderProductsList() {
@@ -55,8 +171,8 @@ function renderProductsList() {
     let createOfferProductSpan = document.createElement("span");
     createOfferProductSpan.textContent = e.offerProduct;
 
-    let createPorOfferProduct = document.createElement('h3')
-    createPorOfferProduct.textContent = 'por'
+    let createPorOfferProduct = document.createElement("h3");
+    createPorOfferProduct.textContent = "por";
 
     let createRealPriceProduct = document.createElement("h1");
     createRealPriceProduct.textContent = e.priceProduct;
@@ -80,13 +196,16 @@ function renderProductsList() {
     createProduct.appendChild(createDivPriceProduct);
     createDivPriceProduct.appendChild(createOfferProduct);
     createOfferProduct.appendChild(createOfferProductSpan);
-    createDivPriceProduct.appendChild(createPorOfferProduct)
+    createDivPriceProduct.appendChild(createPorOfferProduct);
     createDivPriceProduct.appendChild(createRealPriceProduct);
-    
-    createProduct.appendChild(createDivBuyCart)
-    createDivBuyCart.appendChild(createButtonBuyProduct)
-    createDivBuyCart.appendChild(createButtonCartProduct)
+    createProduct.appendChild(createDivBuyCart);
+    createDivBuyCart.appendChild(createButtonBuyProduct);
+    createDivBuyCart.appendChild(createButtonCartProduct);
     getContainerProducts.appendChild(createProduct);
   });
 }
 renderProductsList();
+
+// CARRINHO
+
+

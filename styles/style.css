@@ -4,7 +4,6 @@ section {
   height: 100%;
   margin-top: 2.1875rem;
   margin-bottom: 6.25rem;
-  border-top: 2px solid #272727;
   padding: 5px;
 }
 
@@ -23,7 +22,7 @@ section {
   transition: 0.4s;
 }
 
-/* HEADER */
+/* reset */ 
 * {
   padding: 0;
   margin: 0;
@@ -32,31 +31,33 @@ section {
   box-sizing: border-box;
   font-family: "Poppins";
   color: #ffffff;
+  /* COR DO BODY E SCROLLBAR */
 }
 
 body {
   background-color: #0f0f0f;
 }
 
-/* CARROSSEL */
 body::-webkit-scrollbar {
   width: 12px;
 }
 
 body::-webkit-scrollbar-track {
-  background: #fff;
+  background: transparent;
 }
 
 body::-webkit-scrollbar-thumb {
   background-color: #0f0f0f;
   border-radius: 20px;
   border: 3px solid #a3a3a3;
+  /* CARROSSEL */
 }
 
 .swiper {
   margin-top: 50px;
   width: 1000px;
   background-color: #0f0f0f;
+  border-radius: 5px;
 }
 .swiper .swiper-slide {
   text-align: center;
@@ -72,10 +73,38 @@ body::-webkit-scrollbar-thumb {
   background-position: center center;
   cursor: pointer;
   transition: 0.4s;
-  border-radius: 1.25rem;
+  border-radius: 5px;
 }
 .swiper .swiper-slide img:hover {
   opacity: 0.8;
+}
+
+.container-carrossel {
+  margin-top: 70px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  border-bottom: 4px solid #1b1b1b;
+}
+.container-carrossel .img-man-gaming {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.container-carrossel .img-man-gaming img {
+  position: relative;
+  width: 600px;
+}
+
+.frase {
+  width: 110%;
+  display: flex;
+  text-align: center;
+}
+.frase h1 {
+  -webkit-text-stroke: 1px white;
+  font-family: arial;
+  color: black;
 }
 
 /* NAVEGAÇÃO */
@@ -164,11 +193,35 @@ header nav li > a:hover {
     transform: translateX(0);
   }
 }
+.social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 0.3125rem;
+  left: 43%;
+  gap: 20px;
+}
+.social-media img {
+  width: 1.875rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.social-media img:hover {
+  width: 40px;
+}
+
 /* PRODUTOS */
 .container-products {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 6.25rem;
   flex-wrap: wrap;
 }
 .container-products .product {

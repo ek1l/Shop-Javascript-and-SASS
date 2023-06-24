@@ -1,6 +1,6 @@
 @import 'variables'
 
-/* HEADER */
+/* reset */ 
 
 *
     padding: 0
@@ -11,25 +11,28 @@
     font-family: 'Poppins'
     color: $font-color
 
+    /* COR DO BODY E SCROLLBAR */
+
 body
     background-color: $color-bg-body
-/* CARROSSEL */
 
 body::-webkit-scrollbar
     width: 12px
 
 body::-webkit-scrollbar-track
-    background: #fff
+    background: transparent
 
 body::-webkit-scrollbar-thumb
     background-color: #0f0f0f
     border-radius: 20px
     border: 3px solid #a3a3a3
 
+    /* CARROSSEL */
 .swiper
     margin-top: 50px
     width: 1000px
     background-color: $color-bg-body
+    border-radius: 5px
 
     .swiper-slide
         text-align: center
@@ -38,16 +41,40 @@ body::-webkit-scrollbar-thumb
         display: flex
         justify-content: center
         align-items: center
+
+
         img
             width: 100%
             height: 500px
             background-position: center center
             cursor: pointer
             transition: 0.4s
-            border-radius: 1.25rem
+            border-radius: 5px
             &:hover
                 opacity: 0.8
 
+.container-carrossel
+    margin-top: 70px 
+    display: flex
+    align-items: flex-end
+    justify-content: flex-end
+    border-bottom: 4px solid #1b1b1b
+
+    .img-man-gaming
+        display: flex
+        align-items: flex-end
+        justify-content: flex-end
+        img
+            position: relative
+            width: 600px
+.frase 
+    width: 110%
+    display: flex
+    text-align: center
+    h1
+     -webkit-text-stroke: 1px white
+     font-family: arial 
+     color: black
 /* NAVEGAÇÃO
 
 header
@@ -125,6 +152,29 @@ header
         opacity: 1
         transform: translateX(0)
 
+
+.social-media
+
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: $color-bg-header
+    width: 200px
+    height: 50px
+    position: absolute
+    border-bottom-left-radius: 10px
+    border-bottom-right-radius: 10px
+    padding: .3125rem
+    left: 43%
+    gap: 20px
+    img
+        width: 1.875rem
+        cursor: pointer
+        transition: 0.3s
+        &:hover
+            width: 40px
+        
+       
 /* PRODUTOS */
 
 section
@@ -134,6 +184,7 @@ section
     display: flex
     align-items: center
     justify-content: center
+    gap: 6.25rem
     flex-wrap: wrap
     .product
         width: 260px
