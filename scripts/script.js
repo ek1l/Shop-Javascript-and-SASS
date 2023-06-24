@@ -226,6 +226,7 @@ function verifyProducExist() {
     countCart.style.display = "none";
   }
 }
+verifyProducExist();
 
 function notification() {
   const notification = document.querySelector(".notification");
@@ -234,7 +235,7 @@ function notification() {
     notification.style.display = "none";
   }, 2000);
 }
-verifyProducExist();
+
 
 let intemsCart = [];
 

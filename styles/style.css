@@ -55,6 +55,7 @@ body {
   border-radius: 20px;
   animation: myAnim 1s ease 0s 1 normal forwards;
   display: none;
+  transition: 0.4s ease;
 }
 
 @keyframes myAnim {
@@ -234,7 +235,6 @@ header nav li > a:hover {
 
 .search-input.active {
   display: block;
-  animation: myAnim 1s ease 0s 1 normal forwards;
 }
 
 @keyframes myAnim {
@@ -336,6 +336,7 @@ header nav li > a:hover {
   display: flex;
   align-content: center;
   justify-content: center;
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
