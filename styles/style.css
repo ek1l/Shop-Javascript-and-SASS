@@ -35,9 +35,38 @@ section {
 }
 
 body {
+  position: relative;
   background-color: #0f0f0f;
 }
 
+.notification {
+  position: fixed;
+  top: 150px;
+  z-index: 1000;
+  margin-left: 20px;
+  background-color: black;
+  width: 300px;
+  height: 3.75rem;
+  padding: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  animation: myAnim 1s ease 0s 1 normal forwards;
+  display: none;
+}
+
+@keyframes myAnim {
+  0% {
+    transform: scale(0.5);
+    transform-origin: 100% 50%;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: 100% 50%;
+  }
+}
 body::-webkit-scrollbar {
   width: 12px;
 }

@@ -14,7 +14,34 @@
     /* COR DO BODY E SCROLLBAR */
 
 body
+    position: relative
     background-color: $color-bg-body
+
+.notification
+    position: fixed
+    top: 150px
+    z-index: 1000
+    margin-left: 20px
+    background-color: black
+    width: 300px
+    height: 3.75rem
+    padding: 5px
+    text-align: center
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 20px
+    animation: myAnim 1s ease 0s 1 normal forwards
+    display: none
+
+@keyframes myAnim
+    0%
+        transform: scale(0.5)
+        transform-origin: 100% 50%
+
+    100%
+        transform: scale(1)
+        transform-origin: 100% 50%
 
 body::-webkit-scrollbar
     width: 12px
@@ -42,7 +69,6 @@ body::-webkit-scrollbar-thumb
         justify-content: center
         align-items: center
 
-
         img
             width: 100%
             height: 500px
@@ -54,7 +80,7 @@ body::-webkit-scrollbar-thumb
                 opacity: 0.8
 
 .container-carrossel
-    margin-top: 70px 
+    margin-top: 70px
     display: flex
     align-items: flex-end
     justify-content: flex-end
@@ -67,14 +93,14 @@ body::-webkit-scrollbar-thumb
         img
             position: relative
             width: 600px
-.frase 
+.frase
     width: 110%
     display: flex
     text-align: center
     h1
-     -webkit-text-stroke: 1px white
-     font-family: arial 
-     color: black
+        -webkit-text-stroke: 1px white
+        font-family: arial
+        color: black
 /* NAVEGAÇÃO
 
 header
@@ -102,8 +128,8 @@ header
             text-align: center
             transition: 0.4s
             &:hover
-              background-color: #5e5e5e 
-              font-weight: bold 
+                background-color: #5e5e5e
+                font-weight: bold
         img
             transition: 0.4s
             padding: .3125rem
@@ -173,7 +199,6 @@ header
         opacity: 1
         transform: translateX(0)
 
-
 .social-media
 
     display: flex
@@ -194,8 +219,7 @@ header
         transition: 0.3s
         &:hover
             width: 40px
-        
-       
+
 /* PRODUTOS */
 
 section

@@ -215,14 +215,25 @@ function somarCartProduct() {
   transformNumberCountCart += 1;
   countCart.textContent = transformNumberCountCart;
   verifyProducExist();
+
 }
 
 function verifyProducExist() {
   if (transformNumberCountCart > 0) {
     countCart.style.display = "block";
+    notification()
   } else {
     countCart.style.display = "none";
   }
+}
+
+function notification() {
+  const notification = document.querySelector('.notification');
+  notification.style.display = "block";
+  setTimeout(() => {
+    notification.style.display = "none";
+  },1000)
+
 }
 
 verifyProducExist();
