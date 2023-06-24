@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Loja</title>
-    <link rel="shortcut icon" href="./pacman.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./pacman.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,82 +12,92 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
   </head>
   <body>
-
-
     <header>
       <nav>
         <div class="logo">
           <h1>LOGO</h1>
+         <img id="cart" src="./carrinho-de-compras.png" alt="">
+         <div class="count-items">0</div>
         </div>
         <ul>
           <li><a href="#">HOME</a></li>
           <li><a href="#">ABOUT</a></li>
           <li><a href="#">CONTACT</a></li>
+          
         </ul>
         <div class="search">
+          
           <input class="search-input" type="search" placeholder="Search" />
           <img class="active-search" src="./search.png" alt="search-icon" />
+          
         </div>
       </nav>
     </header>
+
     <div class="social-media">
-      <img src="./face.png" alt="">
-      <img src="./insta.png" alt="">
-      <img src="./whats.png" alt="">
+      <img src="./face.png" alt="" />
+      <img src="./insta.png" alt="" />
+      <img src="./whats.png" alt="" />
     </div>
-<div class="container-carrossel">
-<div class="img-man-gaming">
-  <img src="./kratos.webp" alt="">
-</div>
-<div class="frase-carrossel">
-  <div class="frase">
-    <h1>POTÊNCIA E DESEMPENHO AO SEU ALCANCE: DESCUBRA O MUNDO DOS COMPUTADORES!</h1>
-  </div>
-  <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="./gta  v.jpg" alt=""></div>
-        <div class="swiper-slide"><img src="./thewitcher.webp" alt=""></div>
-        <div class="swiper-slide"><img src="./godofwar.jpg" alt=""></div>
-        <div class="swiper-slide"><img src="./mario.webp" alt=""></div>
-        <div class="swiper-slide"><img src="./alenda.png" alt=""></div>
+
+    <div class="container-carrossel">
+      <div class="img-man-gaming">
+        <img src="./kratos.webp" alt="" />
       </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
+      <div class="frase-carrossel">
+        <div class="frase">
+          <h1>
+            POTÊNCIA E DESEMPENHO AO SEU ALCANCE: DESCUBRA O MUNDO DOS
+            COMPUTADORES!
+          </h1>
+        </div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./gta  v.jpg" alt="" /></div>
+            <div class="swiper-slide">
+              <img src="./thewitcher.webp" alt="" />
+            </div>
+            <div class="swiper-slide"><img src="./godofwar.jpg" alt="" /></div>
+            <div class="swiper-slide"><img src="./mario.webp" alt="" /></div>
+            <div class="swiper-slide"><img src="./alenda.png" alt="" /></div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="img-man-gaming">
+        <img src="./geralt.png" alt="" />
+      </div>
     </div>
-</div>
-    <div class="img-man-gaming">
-      <img src="./geralt.png" alt="">
-    </div>
-</div>
 
     <main>
-      <section class="container-products">
-
-      </section>
+      <section class="container-products"></section>
     </main>
 
     <script src="./scripts/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".mySwiper", {
-          autoplay: {
-            delay: 3000, 
-            disableOnInteraction: false, 
-          },
-          pagination: {
-            el: ".swiper-pagination",
-            type: "fraction",
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        });
-      </script>
-      
+      var swiper = new Swiper(".mySwiper", {
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>

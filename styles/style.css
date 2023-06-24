@@ -117,12 +117,36 @@ header {
   height: 6.25rem;
 }
 header .logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   cursor: pointer;
   color: #ffffff;
   transition: 0.4s;
 }
 header .logo:hover {
   color: #888888;
+}
+header .logo .count-items {
+  background-color: #333232;
+  padding: 0.3125rem;
+  border-radius: 0.3125rem;
+  width: 1.875rem;
+  text-align: center;
+  transition: 0.4s;
+}
+header .logo .count-items:hover {
+  background-color: #5e5e5e;
+  font-weight: bold;
+}
+header .logo img {
+  transition: 0.4s;
+  padding: 0.3125rem;
+  border-radius: 5px;
+}
+header .logo img:hover {
+  -webkit-transform: rotate(100deg);
+  background-color: #333232;
 }
 header nav {
   display: flex;
@@ -144,7 +168,7 @@ header nav li > a:hover {
 }
 
 .search {
-  width: 225px;
+  width: 250px;
   display: flex;
   align-items: center;
   position: relative;
@@ -204,7 +228,7 @@ header nav li > a:hover {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 0.3125rem;
-  left: 43%;
+  left: 45%;
   gap: 20px;
 }
 .social-media img {

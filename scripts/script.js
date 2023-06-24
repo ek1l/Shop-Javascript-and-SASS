@@ -73,6 +73,14 @@ let products = [
     priceProduct: "R$3,579,90",
   },
 
+  {
+    imgProduct: "pc1.jpeg",
+    nameProduct: "PC GAMER",
+    descriptionProduct:
+      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
+    offerProduct: "de 4,998,80",
+    priceProduct: "R$3,579,90",
+  },
 
   {
     imgProduct: "pc1.jpeg",
@@ -83,7 +91,6 @@ let products = [
     priceProduct: "R$3,579,90",
   },
 
-
   {
     imgProduct: "pc1.jpeg",
     nameProduct: "PC GAMER",
@@ -93,7 +100,6 @@ let products = [
     priceProduct: "R$3,579,90",
   },
 
-
   {
     imgProduct: "pc1.jpeg",
     nameProduct: "PC GAMER",
@@ -102,17 +108,6 @@ let products = [
     offerProduct: "de 4,998,80",
     priceProduct: "R$3,579,90",
   },
-
-
-  {
-    imgProduct: "pc1.jpeg",
-    nameProduct: "PC GAMER",
-    descriptionProduct:
-      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
-    offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579,90",
-  },
-
 
   {
     imgProduct: "pc1.jpeg",
@@ -208,4 +203,30 @@ renderProductsList();
 
 // CARRINHO
 
+const countCart = document.querySelector(".count-items");
 
+let transformNumberCountCart = Number(countCart.textContent);
+
+const cart = document.querySelector("#cart");
+
+let buttonCart = document.querySelectorAll(".cart");
+
+function somarCartProduct() {
+  transformNumberCountCart += 1;
+  countCart.textContent = transformNumberCountCart;
+  verifyProducExist();
+}
+
+function verifyProducExist() {
+  if (transformNumberCountCart > 0) {
+    countCart.style.display = "block";
+  } else {
+    countCart.style.display = "none";
+  }
+}
+
+verifyProducExist();
+
+buttonCart.forEach((e) => {
+  e.addEventListener("click", somarCartProduct);
+});
