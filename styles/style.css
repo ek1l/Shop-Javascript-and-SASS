@@ -452,6 +452,7 @@ header nav li > a:hover {
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+  gap: 50px;
 }
 .comprar button {
   background-color: #292929;
@@ -467,6 +468,7 @@ header nav li > a:hover {
 }
 .comprar button:hover {
   color: green;
+  background-color: #1b1b1b;
 }
 
 .carrinho.active {

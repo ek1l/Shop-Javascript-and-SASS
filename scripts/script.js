@@ -16,7 +16,7 @@ let products = [
     descriptionProduct:
       "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
     offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579,90",
+    priceProduct: "R$3,579",
   },
 
   {
@@ -25,7 +25,7 @@ let products = [
     descriptionProduct:
       "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
     offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579,90",
+    priceProduct: "R$3,579",
   },
 
   {
@@ -34,7 +34,7 @@ let products = [
     descriptionProduct:
       "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
     offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579,90",
+    priceProduct: "R$3,579",
   },
 
   {
@@ -43,7 +43,7 @@ let products = [
     descriptionProduct:
       "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
     offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579,90",
+    priceProduct: "R$3,579",
   },
 
   {
@@ -52,7 +52,7 @@ let products = [
     descriptionProduct:
       "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
     offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579,90",
+    priceProduct: "R$3,579",
   },
 
   {
@@ -61,7 +61,7 @@ let products = [
     descriptionProduct:
       "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
     offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579,90",
+    priceProduct: "R$3,579",
   },
 
   {
@@ -70,7 +70,7 @@ let products = [
     descriptionProduct:
       "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
     offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579,90",
+    priceProduct: "R$3,579",
   },
 
   {
@@ -79,7 +79,7 @@ let products = [
     descriptionProduct:
       "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
     offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579,90",
+    priceProduct: "R$3,579",
   },
 
   {
@@ -88,7 +88,7 @@ let products = [
     descriptionProduct:
       "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
     offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579,90",
+    priceProduct: "R$3,579",
   },
 
   {
@@ -97,7 +97,7 @@ let products = [
     descriptionProduct:
       "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
     offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579,90",
+    priceProduct: "R$3,579",
   },
 
   {
@@ -106,7 +106,7 @@ let products = [
     descriptionProduct:
       "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
     offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579,90",
+    priceProduct: "R$3,579",
   },
 
   {
@@ -115,7 +115,7 @@ let products = [
     descriptionProduct:
       "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
     offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579,90",
+    priceProduct: "R$3,579",
   },
 
   {
@@ -124,7 +124,7 @@ let products = [
     descriptionProduct:
       "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
     offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579,90",
+    priceProduct: "R$3,579",
   },
 
   {
@@ -133,7 +133,7 @@ let products = [
     descriptionProduct:
       "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
     offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579,90",
+    priceProduct: "R$3,579",
   },
 ];
 
@@ -271,6 +271,7 @@ function removeItemFromCart(index) {
   intemsCart.splice(index, 1);
   renderProductsListDois();
   verifyProducExist();
+  totalPrice();
 }
 
 function renderProductsListDois() {
@@ -322,6 +323,7 @@ function renderProductsListDois() {
     criarDivPrice.appendChild(criarPreco);
     getContainerCart.appendChild(criarDivItemsCart);
   });
+  totalPrice();
 }
 
 function fecharAbrirCartLateral() {
@@ -335,9 +337,22 @@ buttonCart.forEach((e) => {
 
     addItemsToCart(index);
     renderProductsListDois();
+    console.log(totalPrice());
   });
 });
 
 cart.addEventListener("click", fecharAbrirCartLateral);
 
 countCart.addEventListener("click", fecharAbrirCartLateral);
+
+function totalPrice() {
+  let precoTotalDosItens = intemsCart.reduce(
+    (sum, e) =>
+      sum + parseFloat(e.priceProduct.replace("R$", "").replace(",", ".")),
+    0
+  );
+  let innerTotalPrice = document.querySelector(".total-price");
+  innerTotalPrice.textContent = `R$${precoTotalDosItens.toFixed(3)}`;
+
+  return precoTotalDosItens;
+}
