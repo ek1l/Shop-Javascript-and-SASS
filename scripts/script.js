@@ -228,11 +228,7 @@ function verifyProducExist() {
 
 verifyProducExist();
 
-function carrinhoVazio() {
-  let verificarSeExisteProdutoNoCarrinho =
-    document.querySelector(".not-product");
-  verificarSeExisteProdutoNoCarrinho.display = "none";
-}
+
 
 function notification() {
   const notification = document.querySelector(".notification");
@@ -242,7 +238,7 @@ function notification() {
   }, 2000);
 }
 
-let intemsCart = [];
+let itensCart = [];
 
 function notificationExisteProductCart() {
   const notification = document.querySelector(".notificationExistProduct");
@@ -254,21 +250,21 @@ function notificationExisteProductCart() {
 
 function addItemsToCart(index) {
   const product = products[index];
-  const isProductInCart = intemsCart.some(
+  const isProductInCart = itensCart.some(
     (item) => item.nameProduct === product.nameProduct
   );
   if (!isProductInCart) {
-    intemsCart.push(product);
+    itensCart.push(product);
     somarCartProduct();
     notification();
-    console.log(intemsCart);
+    console.log(itensCart);
   } else {
     notificationExisteProductCart();
   }
 }
 
 function removeItemFromCart(index) {
-  intemsCart.splice(index, 1);
+  itensCart.splice(index, 1);
   renderProductsListDois();
   verifyProducExist();
   totalPrice();
@@ -277,7 +273,7 @@ function removeItemFromCart(index) {
 function renderProductsListDois() {
   let getContainerCart = document.querySelector(".container-carrinho");
   getContainerCart.innerHTML = "";
-  intemsCart.forEach((e, index) => {
+  itensCart.forEach((e, index) => {
     let criarDivItemsCart = document.createElement("div");
     criarDivItemsCart.classList.add("items-cart");
 
@@ -323,7 +319,9 @@ function renderProductsListDois() {
     criarDivPrice.appendChild(criarPreco);
     getContainerCart.appendChild(criarDivItemsCart);
   });
+
   totalPrice();
+  naoTemProdutos()
 }
 
 function fecharAbrirCartLateral() {
@@ -346,7 +344,7 @@ cart.addEventListener("click", fecharAbrirCartLateral);
 countCart.addEventListener("click", fecharAbrirCartLateral);
 
 function totalPrice() {
-  let precoTotalDosItens = intemsCart.reduce(
+  let precoTotalDosItens = itensCart.reduce(
     (sum, e) =>
       sum + parseFloat(e.priceProduct.replace("R$", "").replace(",", ".")),
     0
@@ -355,4 +353,13 @@ function totalPrice() {
   innerTotalPrice.textContent = `R$${precoTotalDosItens.toFixed(3)}`;
 
   return precoTotalDosItens;
+}
+
+function naoTemProdutos() {
+  const naoTemProdutosCart = document.querySelector(".nao-tem-produtos");
+  if (itensCart.length === 0) {
+    naoTemProdutosCart.style.display = "block";
+  } else {
+    naoTemProdutosCart.style.display = "none";
+  }
 }

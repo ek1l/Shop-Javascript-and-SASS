@@ -476,4 +476,18 @@ header nav li > a:hover {
   visibility: visible;
 }
 
+.nao-tem-produtos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.nao-tem-produtos-dois {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: block;
+}
+
 /*# sourceMappingURL=style.css.map */
