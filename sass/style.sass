@@ -326,7 +326,12 @@ section
 .carrinho
     position: fixed
     right: 0
-    background-color: black
+    background: rgba(0, 0, 0, 0.41)
+    border-radius: 16px
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
+    backdrop-filter: blur(5.9px)
+    -webkit-backdrop-filter: blur(5.9px)
+    border: 1px solid rgba(0, 0, 0, 0.19)
     height: 100vh
     width: 31.25rem
     z-index: 100000000
@@ -340,9 +345,13 @@ section
     visibility: hidden
 
     .items-cart
-        background-color: #FFF
+        background: rgba(255, 255, 255, 0.705)
+        border-radius: 16px
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
+        backdrop-filter: blur(5.9px)
+        -webkit-backdrop-filter: blur(5.9px)
+        border: 1px solid rgba(255, 255, 255, 0.19)
         padding: .3125rem
-        border-radius: 10px
         display: flex
         align-content: center
         gap: 10px
@@ -408,6 +417,26 @@ section
         &:hover
             color: green
             background-color: #1b1b1b
+.titulo-fechar
+    display: flex
+    align-items: center
+    justify-content: center
+    gap:80px
+#fecharCartLateral
+    background-color: #292929
+    border-radius: 10px
+    font-size: 1.5625rem
+    font-weight: bold
+    width: 50px
+    height: 50px
+    outline: none
+    transition: 0.4s
+    cursor: pointer
+    border: none
+
+    &:hover
+        color: white
+        background-color: red
 
 .carrinho.active
     opacity: 1
@@ -419,10 +448,8 @@ section
     align-items: center
     display: none
 
-
 .nao-tem-produtos-dois
     display: flex
     justify-content: center
     align-items: center
     display: block
-

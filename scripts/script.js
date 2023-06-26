@@ -228,8 +228,6 @@ function verifyProducExist() {
 
 verifyProducExist();
 
-
-
 function notification() {
   const notification = document.querySelector(".notification");
   notification.style.display = "block";
@@ -321,7 +319,7 @@ function renderProductsListDois() {
   });
 
   totalPrice();
-  naoTemProdutos()
+  naoTemProdutos();
 }
 
 function fecharAbrirCartLateral() {
@@ -363,3 +361,7 @@ function naoTemProdutos() {
     naoTemProdutosCart.style.display = "none";
   }
 }
+
+const fecharCarrinhoLateral = document.querySelector("#fecharCartLateral");
+const carrinho = document.querySelector(".carrinho");
+fecharCarrinhoLateral.addEventListener("click", () =>  carrinho.classList.remove("active"));
