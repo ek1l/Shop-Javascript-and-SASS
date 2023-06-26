@@ -213,7 +213,7 @@ const cart = document.querySelector("#cart");
 let buttonCart = document.querySelectorAll(".cart");
 
 function somarCartProduct() {
-  transformNumberCountCart += 1;
+  transformNumberCountCart++;
   countCart.textContent = transformNumberCountCart;
   verifyProducExist();
 }
@@ -236,7 +236,6 @@ function notification() {
   }, 2000);
 }
 
-
 let intemsCart = [];
 
 function addItemsToCart(index) {
@@ -245,10 +244,61 @@ function addItemsToCart(index) {
   console.log(intemsCart);
 }
 
+function renderProductsListDois() {
+  let getContainerCart = document.querySelector(".container-carrinho");
+  getContainerCart.innerHTML = "";
+  intemsCart.forEach((e) => {
+    let criarDivItemsCart = document.createElement("div");
+    criarDivItemsCart.classList.add("items-cart");
+
+    let criarDivDafotoDoProduto = document.createElement("div");
+    criarDivDafotoDoProduto.classList.add("foto-product");
+
+    let criarImg = document.createElement("img");
+    criarImg.src = e.imgProduct;
+
+    let criarDivDoNomeEDescricao = document.createElement("div");
+    criarDivDoNomeEDescricao.classList.add("nome-desc");
+
+    let criarNomeProduto = document.createElement("h3");
+    criarNomeProduto.textContent = e.nameProduct;
+    let criarDescricao = document.createElement("p");
+    criarDescricao.textContent = e.descriptionProduct;
+
+    let criarDivPrice = document.createElement("div");
+    criarDivPrice.classList.add("price");
+
+    let criarPreco = document.createElement("h2");
+    criarPreco.textContent = e.priceProduct;
+
+    criarDivItemsCart.appendChild(criarDivDafotoDoProduto);
+    criarDivDafotoDoProduto.appendChild(criarImg);
+    criarDivItemsCart.appendChild(criarDivDoNomeEDescricao);
+    criarDivDoNomeEDescricao.appendChild(criarNomeProduto);
+    criarDivDoNomeEDescricao.appendChild(criarDescricao);
+    criarDivDoNomeEDescricao.appendChild(criarDivPrice);
+    criarDivPrice.appendChild(criarPreco);
+    getContainerCart.appendChild(criarDivItemsCart);
+  });
+}
+
+function fecharAbrirCartLateral() {
+  const containerProducts = document.querySelector(".carrinho");
+  containerProducts.classList.toggle("active");
+}
+
 buttonCart.forEach((e) => {
   e.addEventListener("click", () => {
     const index = parseInt(e.dataset.index);
     somarCartProduct();
     addItemsToCart(index);
+    renderProductsListDois();
   });
 });
+
+cart.addEventListener("click", () => {
+  fecharAbrirCartLateral();
+  renderProductsListDois();
+});
+
+console.log(intemsCart);
