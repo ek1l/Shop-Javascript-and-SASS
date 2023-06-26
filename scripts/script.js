@@ -221,12 +221,11 @@ function somarCartProduct() {
 function verifyProducExist() {
   if (transformNumberCountCart > 0) {
     countCart.style.display = "block";
-
-    notification();
   } else {
     countCart.style.display = "none";
   }
 }
+
 verifyProducExist();
 
 function carrinhoVazio() {
@@ -245,16 +244,39 @@ function notification() {
 
 let intemsCart = [];
 
+function notificationExisteProductCart() {
+  const notification = document.querySelector(".notificationExistProduct");
+  notification.style.display = "block";
+  setTimeout(() => {
+    notification.style.display = "none";
+  }, 2000);
+}
+
 function addItemsToCart(index) {
   const product = products[index];
-  intemsCart.push(product);
-  console.log(intemsCart);
+  const isProductInCart = intemsCart.some(
+    (item) => item.nameProduct === product.nameProduct
+  );
+  if (!isProductInCart) {
+    intemsCart.push(product);
+    somarCartProduct();
+    notification();
+    console.log(intemsCart);
+  } else {
+    notificationExisteProductCart();
+  }
+}
+
+function removeItemFromCart(index) {
+  intemsCart.splice(index, 1);
+  renderProductsListDois();
+  verifyProducExist();
 }
 
 function renderProductsListDois() {
   let getContainerCart = document.querySelector(".container-carrinho");
   getContainerCart.innerHTML = "";
-  intemsCart.forEach((e) => {
+  intemsCart.forEach((e, index) => {
     let criarDivItemsCart = document.createElement("div");
     criarDivItemsCart.classList.add("items-cart");
 
@@ -283,7 +305,11 @@ function renderProductsListDois() {
 
     let createButtonDelete = document.createElement("button");
     createButtonDelete.textContent = "X";
-    createButtonDelete.classList.add('excluir')
+    createButtonDelete.classList.add("excluir");
+
+    createButtonDelete.addEventListener("click", () => {
+      removeItemFromCart(index);
+    });
 
     criarDivItemsCart.appendChild(criarDivDafotoDoProduto);
     criarDivDafotoDoProduto.appendChild(criarImg);
@@ -306,14 +332,12 @@ function fecharAbrirCartLateral() {
 buttonCart.forEach((e) => {
   e.addEventListener("click", () => {
     const index = parseInt(e.dataset.index);
-    somarCartProduct();
+
     addItemsToCart(index);
     renderProductsListDois();
   });
 });
 
-cart.addEventListener("click", () => {
-  fecharAbrirCartLateral();
-});
+cart.addEventListener("click", fecharAbrirCartLateral);
 
-console.log(intemsCart);
+countCart.addEventListener("click", fecharAbrirCartLateral);

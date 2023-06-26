@@ -44,6 +44,33 @@ body
         transform: scale(1)
         transform-origin: 100% 50%
 
+.notification, .notificationExistProduct
+    position: fixed
+    top: 150px
+    z-index: 1000
+    margin-left: 20px
+    background-color: black
+    width: 300px
+    height: 3.75rem
+    padding: 5px
+    text-align: center
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 20px
+    animation: myAnim 1s ease 0s 1 normal forwards
+    display: none
+    transition: 0.4s ease
+
+@keyframes myAnim
+    0%
+        transform: scale(0.5)
+        transform-origin: 100% 50%
+
+    100%
+        transform: scale(1)
+        transform-origin: 100% 50%
+
 body::-webkit-scrollbar
     width: 12px
 
@@ -277,12 +304,25 @@ section
                 &:hover
                     background-color: #0f0f0f
 
+.container-carrinho::-webkit-scrollbar
+    width: 11px
+
+.container-carrinho::-webkit-scrollbar-track
+    background: transparent
+
+.container-carrinho::-webkit-scrollbar-thumb
+    background-color: #0f0f0f
+    border-radius: 20px
+    border: 2px solid #a3a3a3
+
 .container-carrinho
     height: 750px
-    overflow: hidden
+    overflow: auto
     display: flex
     flex-direction: column
     gap: 20px
+    transition: opacity 0.5s ease-out
+    opacity: 1
 .carrinho
     position: fixed
     right: 0
@@ -295,7 +335,9 @@ section
     padding: 5px
     flex-direction: column
     gap: 20px
-    display: none
+    opacity: 0
+    transition: opacity 0.4s ease-out
+    visibility: hidden
 
     .items-cart
         background-color: #FFF
@@ -360,8 +402,10 @@ section
         transition: 0.4s
         cursor: pointer
         border: none
+
         &:hover
             color: green
 
 .carrinho.active
-    display: block
+    opacity: 1
+    visibility: visible
