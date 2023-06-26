@@ -221,12 +221,19 @@ function somarCartProduct() {
 function verifyProducExist() {
   if (transformNumberCountCart > 0) {
     countCart.style.display = "block";
+
     notification();
   } else {
     countCart.style.display = "none";
   }
 }
 verifyProducExist();
+
+function carrinhoVazio() {
+  let verificarSeExisteProdutoNoCarrinho =
+    document.querySelector(".not-product");
+  verificarSeExisteProdutoNoCarrinho.display = "none";
+}
 
 function notification() {
   const notification = document.querySelector(".notification");
@@ -271,12 +278,21 @@ function renderProductsListDois() {
     let criarPreco = document.createElement("h2");
     criarPreco.textContent = e.priceProduct;
 
+    let createDivButtonDelete = document.createElement("div");
+    createDivButtonDelete.classList.add("button-remove");
+
+    let createButtonDelete = document.createElement("button");
+    createButtonDelete.textContent = "X";
+    createButtonDelete.classList.add('excluir')
+
     criarDivItemsCart.appendChild(criarDivDafotoDoProduto);
     criarDivDafotoDoProduto.appendChild(criarImg);
     criarDivItemsCart.appendChild(criarDivDoNomeEDescricao);
     criarDivDoNomeEDescricao.appendChild(criarNomeProduto);
     criarDivDoNomeEDescricao.appendChild(criarDescricao);
     criarDivDoNomeEDescricao.appendChild(criarDivPrice);
+    criarDivItemsCart.appendChild(createDivButtonDelete);
+    createDivButtonDelete.appendChild(createButtonDelete);
     criarDivPrice.appendChild(criarPreco);
     getContainerCart.appendChild(criarDivItemsCart);
   });
@@ -298,7 +314,6 @@ buttonCart.forEach((e) => {
 
 cart.addEventListener("click", () => {
   fecharAbrirCartLateral();
-  renderProductsListDois();
 });
 
 console.log(intemsCart);

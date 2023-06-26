@@ -384,7 +384,7 @@ header nav li > a:hover {
   text-transform: lowercase;
 }
 
-.button-remove #excluir {
+.button-remove .excluir {
   background-color: white;
   color: black;
   cursor: pointer;
@@ -395,7 +395,7 @@ header nav li > a:hover {
   font-weight: bold;
   transition: 0.4s;
 }
-.button-remove #excluir:hover {
+.button-remove .excluir:hover {
   background-color: black;
   color: white;
 }
@@ -404,6 +404,7 @@ header nav li > a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 }
 .comprar button {
   background-color: #292929;
