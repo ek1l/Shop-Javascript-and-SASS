@@ -373,3 +373,13 @@ const carrinho = document.querySelector(".carrinho");
 fecharCarrinhoLateral.addEventListener("click", () =>
   carrinho.classList.remove("active")
 );
+
+
+
+// MENU HAMBÚRGUER
+
+const menu = document.querySelector('#hamburguer')
+const nav = document.querySelector('.nav')
+menu.addEventListener("click", () => {
+nav.classList.toggle('active')
+})
