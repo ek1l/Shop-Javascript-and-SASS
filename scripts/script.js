@@ -12,128 +12,127 @@ activeSearchButton.addEventListener("click", activeSearch);
 let products = [
   {
     imgProduct: "pc1.jpeg",
-    nameProduct: "1 PC GAMER",
+    nameProduct: "PC GAMER I5",
     descriptionProduct:
       "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
-    offerProduct: "de 4,998,80",
+    offerProduct: "de R$4,998",
     priceProduct: "R$3,579",
   },
 
   {
-    imgProduct: "pc1.jpeg",
-    nameProduct: "2 PC GAMER",
+    imgProduct: "cadeiragamer.jpg",
+    nameProduct: "Cadeira Gamer DT3",
+    descriptionProduct: "CADEIRA GAMER DT3 SPORTS NERO V2, PRETO, 13747-2",
+    offerProduct: "de R$1,999",
+    priceProduct: "R$1,499",
+  },
+
+  {
+    imgProduct: "gabinete.jpg",
+    nameProduct: "Gabinete Gamer",
     descriptionProduct:
-      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
-    offerProduct: "de 4,998,80",
+      "GABINETE GAMER LIAN LI LANCOOL 216, RGB, LATERAL DE VIDRO, COM 2 FANS, BRANCO, LANCOOL216RW",
+    offerProduct: "de R$1,499",
+    priceProduct: "R$1,125",
+  },
+
+  {
+    imgProduct: "watercooler.jpg",
+    nameProduct: "Water Cooler",
+    descriptionProduct:
+      "WATER COOLER NZXT KRAKEN 240 RGB, DISPLAY LCD, 240MM, BRANCO, RL-KR240-W1",
+    offerProduct: "de R$1,529",
+    priceProduct: "R$1,529",
+  },
+
+  {
+    imgProduct: "monitor.jpg",
+    nameProduct: "Monitor Gamer",
+    descriptionProduct:
+      "MONITOR PROFISSIONAL PICHAU PERSEUS P1, MINILED, 27 POL., IPS, QHD, 1MS, 165HZ, FREESYNC, HDMI/DP, PG-PRSPML-BL01",
+    offerProduct: "de R$3.999",
+    priceProduct: "R$4,705",
+  },
+
+  {
+    imgProduct: "placadevideo.jpg",
+    nameProduct: "Placa de vídeo mancer RTX 2060",
+    descriptionProduct:
+      "PLACA DE VIDEO MANCER RTX 2060 SUPER HEIMDALL SS, 8GB, GDDR6, 256-BIT, MCR-RTX2060SUPER-HMDLLSS",
+    offerProduct: "de R$2.035",
+    priceProduct: "R$1,729",
+  },
+
+  {
+    imgProduct: "processador.jpg",
+    nameProduct: "PROCESSADOR AMD RYZEN 5 5600X",
+    descriptionProduct:
+      "PROCESSADOR AMD RYZEN 5 5600X, 6-CORE, 12-THREADS, 3.7GHZ (4.6GHZ TURBO), CACHE 35MB, AM4, 100-100000065BOX",
+    offerProduct: "de R$1,339",
+    priceProduct: "R$1,249",
+  },
+
+  {
+    imgProduct: "placamae.jpg",
+    nameProduct: "Placa mae ASUS PRIME A520M-E",
+    descriptionProduct:
+      "PLACA MAE ASUS PRIME A520M-E DDR4 SOCKET AM4 CHIPSET AMD, PRIME A520M-E",
+    offerProduct: "de R$2,354",
+    priceProduct: "R$2,180",
+  },
+
+  {
+    imgProduct: "processadorintel.jpg",
+    nameProduct: "PROCESSADOR INTEL CORE I3-10100F",
+    descriptionProduct:
+      "PROCESSADOR INTEL CORE I3-10100F, 4-CORE, 8-THREADS, 3.6GHZ (4.3GHZ TURBO), CACHE 6MB, LGA1200, BX8070110100F",
+    offerProduct: "de R$3,587",
+    priceProduct: "R$2,599",
+  },
+
+  {
+    imgProduct: "memoria.jpg",
+    nameProduct: "MEMORIA NOTEBOOK CORSAIR VENGEANCE, 16GB",
+    descriptionProduct:
+      "MEMORIA NOTEBOOK CORSAIR VENGEANCE, 16GB (2X8GB), DDR4, 2400MHZ, C16, PRETA, CMSX16GX4M2A2400C16",
+    offerProduct: "de R$4,998",
     priceProduct: "R$3,579",
   },
 
   {
-    imgProduct: "pc1.jpeg",
-    nameProduct: "3 PC GAMER",
+    imgProduct: "placadevideo4080.jpg",
+    nameProduct: "PLACA DE VIDEO ASUS GEFORCE RTX 4080 ROG STRIX",
     descriptionProduct:
-      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
-    offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579",
+      "PLACA DE VIDEO ASUS GEFORCE RTX 4080 ROG STRIX OC, 16GB, GDDR6X, 256-BIT, ROG-STRIX-RTX4080-O16G-WHITE",
+    offerProduct: "de R$11,761",
+    priceProduct: "R$9,997",
   },
 
   {
-    imgProduct: "pc1.jpeg",
-    nameProduct: "PC GAMER",
+    imgProduct: "pcgamercorsair.jpg",
+    nameProduct: "COMPUTADOR PICHAU GAMER CORSAIR ICUE, AMD RYZEN 5 5600X",
     descriptionProduct:
-      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
-    offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579",
+      "COMPUTADOR PICHAU GAMER CORSAIR ICUE, AMD RYZEN 5 5600X, GEFORCE RTX 3060 TI 8GB, 16GB DDR4, SSD 1TB + SSD M.2 480GB",
+    offerProduct: "de R$10,823",
+    priceProduct: "R$9,199",
   },
 
   {
-    imgProduct: "pc1.jpeg",
-    nameProduct: "PC GAMER",
+    imgProduct: "cadeiraergonomica.jpg",
+    nameProduct: "CADEIRA OFFICE PREMIUM ZINNIA DALIA",
     descriptionProduct:
-      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
-    offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579",
+      "CADEIRA OFFICE PREMIUM ZINNIA DALIA, PRETO, ZNO-DLA-BK01",
+    offerProduct: "de R$2,446",
+    priceProduct: "R$2,079",
   },
 
   {
-    imgProduct: "pc1.jpeg",
-    nameProduct: "PC GAMER",
+    imgProduct: "kitgamer.jpg",
+    nameProduct: "COMPUTADOR MANCER GAMER THOR IV, AMD RYZEN 5 4600G",
     descriptionProduct:
-      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
-    offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579",
-  },
-
-  {
-    imgProduct: "pc1.jpeg",
-    nameProduct: "PC GAMER",
-    descriptionProduct:
-      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
-    offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579",
-  },
-
-  {
-    imgProduct: "pc1.jpeg",
-    nameProduct: "PC GAMER",
-    descriptionProduct:
-      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
-    offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579",
-  },
-
-  {
-    imgProduct: "pc1.jpeg",
-    nameProduct: "PC GAMER",
-    descriptionProduct:
-      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
-    offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579",
-  },
-
-  {
-    imgProduct: "pc1.jpeg",
-    nameProduct: "PC GAMER",
-    descriptionProduct:
-      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
-    offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579",
-  },
-
-  {
-    imgProduct: "pc1.jpeg",
-    nameProduct: "PC GAMER",
-    descriptionProduct:
-      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
-    offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579",
-  },
-
-  {
-    imgProduct: "pc1.jpeg",
-    nameProduct: "PC GAMER",
-    descriptionProduct:
-      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
-    offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579",
-  },
-
-  {
-    imgProduct: "pc1.jpeg",
-    nameProduct: "PC GAMER",
-    descriptionProduct:
-      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
-    offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579",
-  },
-
-  {
-    imgProduct: "pc1.jpeg",
-    nameProduct: "PC GAMER",
-    descriptionProduct:
-      "COMPUTADOR PICHAU GAMER, INTEL I5-10400F, GEFORCE GTX 1650 4GB, 16GB DDR4, SSD 480GB",
-    offerProduct: "de 4,998,80",
-    priceProduct: "R$3,579",
+      "COMPUTADOR MANCER GAMER THOR IV, AMD RYZEN 5 4600G, 16GB DDR4, SSD 240GB + CADEIRA GAMER + MONITOR 24 + KIT PERIFÉRICOS",
+    offerProduct: "de R$2,939",
+    priceProduct: "R$3,458",
   },
 ];
 
@@ -214,6 +213,12 @@ let buttonCart = document.querySelectorAll(".cart");
 
 function somarCartProduct() {
   transformNumberCountCart++;
+  countCart.textContent = transformNumberCountCart;
+  verifyProducExist();
+}
+
+function subtrairCartProduct() {
+  transformNumberCountCart--;
   countCart.textContent = transformNumberCountCart;
   verifyProducExist();
 }
@@ -304,6 +309,7 @@ function renderProductsListDois() {
 
     createButtonDelete.addEventListener("click", () => {
       removeItemFromCart(index);
+      subtrairCartProduct();
     });
 
     criarDivItemsCart.appendChild(criarDivDafotoDoProduto);
@@ -364,4 +370,6 @@ function naoTemProdutos() {
 
 const fecharCarrinhoLateral = document.querySelector("#fecharCartLateral");
 const carrinho = document.querySelector(".carrinho");
-fecharCarrinhoLateral.addEventListener("click", () =>  carrinho.classList.remove("active"));
+fecharCarrinhoLateral.addEventListener("click", () =>
+  carrinho.classList.remove("active")
+);

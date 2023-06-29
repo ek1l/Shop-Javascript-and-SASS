@@ -85,9 +85,10 @@ body::-webkit-scrollbar-thumb
     /* CARROSSEL */
 .swiper
     margin-top: 50px
-    width: 1000px
     background-color: $color-bg-body
     border-radius: 5px
+    max-width: 1000px
+    width: 100%
 
     .swiper-slide
         text-align: center
@@ -149,6 +150,7 @@ header
         cursor: pointer
         color: $font-color
         transition: 0.4s
+        width: 250px
         &:hover
             color: #888888
         .count-items
@@ -229,19 +231,22 @@ header
         opacity: 1
         transform: translateX(0)
 
-.social-media
+.container-social
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
 
+.social-media
     display: flex
     align-items: center
     justify-content: center
     background-color: $color-bg-header
     width: 200px
     height: 50px
-    position: absolute
     border-bottom-left-radius: 10px
     border-bottom-right-radius: 10px
     padding: .3125rem
-    left: 45%
     gap: 20px
     img
         width: 1.875rem
@@ -421,7 +426,7 @@ section
     display: flex
     align-items: center
     justify-content: center
-    gap:80px
+    gap: 80px
 #fecharCartLateral
     background-color: #292929
     border-radius: 10px
@@ -453,3 +458,9 @@ section
     justify-content: center
     align-items: center
     display: block
+
+
+
+
+/* mobile */
+
