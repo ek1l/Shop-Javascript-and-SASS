@@ -112,6 +112,10 @@ body::-webkit-scrollbar-thumb {
   /* CARROSSEL */
 }
 
+.frase-carrossel {
+  width: 100%;
+}
+
 .swiper {
   margin-top: 50px;
   background-color: #0f0f0f;
@@ -132,6 +136,7 @@ body::-webkit-scrollbar-thumb {
   height: 500px;
   background-position: center center;
   cursor: pointer;
+  background-size: cover;
   transition: 0.4s;
   border-radius: 5px;
 }
@@ -531,5 +536,29 @@ header nav li > a:hover {
 }
 
 /* mobile */
+@media (max-width: 2009px) {
+  .frase-carrossel {
+    max-width: 900px;
+    width: 100%;
+  }
+}
+@media (max-width: 1889px) {
+  .frase-carrossel {
+    max-width: 800px;
+    width: 100%;
+  }
+}
+@media (max-width: 1780px) {
+  .frase-carrossel {
+    max-width: 600px;
+    width: 100%;
+  }
+}
+@media (max-width: 1577px) {
+  .frase-carrossel {
+    max-width: 450px;
+    width: 100%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
